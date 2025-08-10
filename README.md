@@ -2,12 +2,47 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
 
+---
+
+## Getting Started
+
+- **Official Installation Guide:**  
+  [Angular Installation](https://angular.dev/installation)
+
+- **CLI Local Setup:**  
+  [Set up Angular CLI locally](https://angular.dev/tools/cli/setup-local)
+
+---
+
+## Recommended Tools
+
+- **Angular Language Service** (VS Code extension)  
+  Provides advanced autocompletion and error checking for Angular templates.
+
+- **Angular DevTools** (browser extension)  
+  Debug and profile Angular applications in Chrome or Edge.
+
+- **Angular Extension Pack** (optional, VS Code)  
+  A collection of helpful Angular extensions.
+
+---
+
+## Developing with AI
+
+- **AI-powered Angular development:**  
+  [Develop with Angular AI](https://angular.dev/ai/develop-with-ai)
+
+- **AI MCP for VS Code:**  
+  [AI Model Control Panel (MCP)](https://angular.dev/ai/mcp#vs-code)
+
+---
+
 ## Development server
 
 To start a local development server, run:
 
 ```bash
-ng serve
+npm start
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
