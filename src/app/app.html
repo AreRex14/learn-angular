@@ -182,7 +182,7 @@
   }
 </style>
 
-<main class="main">
+<main class="main" (click)="onMainClick()">
   <div class="content">
     <div class="left-side">
       <svg
@@ -230,8 +230,35 @@
           <clipPath id="a"><path fill="#fff" d="M0 0h982v239H0z" /></clipPath>
         </defs>
       </svg>
-      <h1>Hello, {{ title() }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
+       <nav>
+        <a routerLink="/">Home</a>
+        <a routerLink="/about">About</a>
+      </nav>
+      <router-outlet />
+      <h1>Welcome to {{ title() }}</h1>
+      <p> {{ displayAnimals }} </p>
+      <p>Which one is yours?</p>
+      <p>You clicked the main area {{ clickCount() }}</p>
+      <p>Yes, the server is {{ isServerRunning() ? "running" : "down" }} 🎉</p>
+      <section>
+        <app-user lang="english" />
+        <p>live from {{ country() }} at {{ currentTime().toLocaleTimeString() }}</p>
+        <app-child (addItemEvent)="addItem($event)" />
+        <p>🐢 all the way down {{ items.length }}</p>
+        <app-articles />
+        <p>
+          <span>Connect on:</span>
+          <ul>
+            @for (messenger of messengers; track messenger.id) {
+              <li>
+                <a href="{{ messenger.url }}" target="_blank" rel="noopener">
+                  {{ messenger.name }}
+                </a>
+              </li>
+            }
+          </ul>
+        <p>
+      </section>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
@@ -338,5 +365,3 @@
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
-<router-outlet />
